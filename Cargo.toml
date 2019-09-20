@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 gwasm-api = { git="https://github.com/golemfactory/gwasm-runner.git" }
+failure = "0.1.5"
