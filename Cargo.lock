@@ -64,7 +64,6 @@ dependencies = [
 name = "hello_world"
 version = "0.1.0"
 dependencies = [
- "failure 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "gwasm-api 0.1.0 (git+https://github.com/golemfactory/gwasm-runner.git)",
 ]
 
