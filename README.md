@@ -18,6 +18,7 @@ partial sums by summing all of them to generate the final result (the
 [gwasm-api]: https://github.com/golemfactory/gwasm-runner/tree/master/gwasm-api
 
 ## Building
+
 In order to build the project, you'll need a recent version of Emscripten SDK
 installed on your machine. The steps on how to do this can be found [here].
 
@@ -32,14 +33,36 @@ cargo build --release
 *NB:* this will automatically cross-compile the project to `wasm32-unknown-emscripten`.
 
 ## Running
+
 In order to run the generated gWasm binary, firstly, you'll need to get the latest
 `gwasm-runner` binary. You can either build it from source (the instructions can be
 found [here](https://github.com/golemfactory/gwasm-runner)), or download the
 precompiled binary from [here](https://github.com/golemfactory/gwasm-runner/releases).
 
-Afterwards, simply run:
+### Running locally
+
+To run the app locally (on your machine only), simply run:
 
 ```
 gwasm-runner target/wasm32-unknown-emscripten/release/hello_world.wasm
 ```
 
+### Running on Golem Unlimited
+
+To run the app on Golem Unlimited cluster, run:
+
+```
+gwasm-runner target/wasm32-unknown-emscripten/release/hello_world.wasm --backend=gu://<ip_address>
+```
+
+### Running on Golem Brass
+
+To run the app on Golem Brass, run:
+
+```
+gwasm-runner target/wasm32-unknown-emscripten/debug/hello_world.wasm --backend=Brass
+```
+
+See our [docs] for more info, and the running options explained in more details.
+
+[docs]: https://docs.golem.network/#/Products/Brass-Beta/gWASM?id=gwasm-runner-example
